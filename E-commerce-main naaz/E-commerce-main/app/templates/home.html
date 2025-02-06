@@ -5,239 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}FusionFits{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            background-color: #FFDAB9;
-            color: #333; */
-        }
-        
-        
-        main {
-    min-height: 90vh;
-    padding: 20px;
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color:#091235;
-    padding: 20px 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-        
-        
-        .search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.search-container input {
-    padding: 10px 15px; /* Adjust padding */
-    padding-left: 50px; /* Push placeholder text to the right */
-    border: 1px solid #0d2357;
-    border-radius: 30px;
-    width: 500px;
-    outline: none;
-    margin-right: -90px;
-    font-size: 14px;
-}
-
-/* Search Button (Icon) */
-.search-container button {
-    position: absolute;
-    left: 15px; /* Keep the icon at the left */
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    color:rgba(0, 0, 0, 0.26);
-}
-.center-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-.cart-btn, .wishlist-btn, .Account {
-    text-decoration: none;
-    color: white;
-    gap: 5px;
-    font-size: 15px; /* Adjust text size */
-    display: flex;
-    flex-direction: column; /* Stack icon above text */
-    align-items: center; /* Center align */
-    justify-content: center;
-    padding: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cart-btn:hover, 
-.wishlist-btn:hover, 
-.account-btn:hover {
-    text-decoration: none; /* Prevents underline on hover */
-    color:#FFDAB9;
-    transform: scale(1.05);
-    background: none; /* Ensures no background color appears */
-}
-
-
-
-.logo img {
-    height: 50px; /* Adjust this value to make the logo bigger */
-    width: auto;
-}
-
-
-
-
-.navbar-buttons {
-    display: flex;
-    justify-content: space-evenly;  /* Evenly spaces buttons */
-    align-items: center;
-    gap: 20px;  /* Controls the space between buttons */
-    margin-left: 30px;  /* Pushes the buttons to the right */
-}
-
-
-/* Modify the Account button to remove the box */
-.navbar-buttons .dropdown .dropbtn {
-    background: none;  /* Remove background */
-    border: none;  /* Remove border */
-    color: white;  /* Keep the text color white */
-    padding: 0;  /* Remove padding */
-    font-size: 1em;  /* Set font size */
-    cursor: pointer;  /* Make it clickable */
-    text-decoration: none;  /* Remove underline */
-}
-
-.navbar-buttons .dropdown .dropbtn:hover {
-    background-color: transparent;  /* Ensure no background on hover */
-}
-
-
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    flex-grow: 1;
-    justify-content: center;
-}
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-        }
-        .nav-links .dropdown .dropbtn {
-            color: black;
-            text-decoration: none;
-            font-size: 1em;
-            padding: 0;
-            background: none;
-            margin: 0;
-            border: none;
-        }
-        /* .dropdown {
-            position: relative;
-        }
-        .dropbtn {
-            /* background-color: none; */
-            /* border: none; */
-            /* color: white; */
-            /*cursor: pointer;
-            font: 1em;
-        } */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color:rgb(232, 224, 218);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            right: 0;
-            border-radius:20px;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            border-radius: 30px;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        footer {
-            background-color:#091235; 
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            
-            bottom: 0;
-            left: 0;
-            position: relative;
-        }
-        main {
-            min-height: 90vh;
-            padding: 10px;
-        }
-        .categories-nav {
-            background-color:#091235; 
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-right: -50px;
-            
-        }
-        .categories-nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-evenly;
-            padding: 0.5rem;
-            margin-bottom: 0px;
-            gap: 30px; 
-            flex-wrap: wrap;
-        }
-        .categories-nav li {
-            display: flex; 
-            color: #fff;
-            font-weight: 500;
-            font-size: 13px;
-            transition: color 0.3s ease;
-        }
-        .categories-nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 13px;
-            transition: color 0.3s ease;
-        }
-        .categories-nav a:hover {
-            color: #f1c40f; /* Yellow on hover */
-        }
-        .categories-nav a.active {
-            color: #f1c40f; /* Highlighted color for the active category */
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
     <nav class="navbar">
@@ -252,8 +20,8 @@
                 <li><a href="{{ url_for('main.gender_specific', gender='male') }}" class="{% if request.path.startswith('/gender/male') %}active{% endif %}">MEN</a></li>
                 <li><a href="{{ url_for('main.gender_specific', gender='female') }}" class="{% if request.path.startswith('/gender/female') %}active{% endif %}">WOMEN</a></li>
                 <li><a href="{{ url_for('main.category_specific', category='kids') }}" class="{% if request.path.startswith('/category/kids') %}active{% endif %}">KIDS</a></li>
-                <li><a href="{{ url_for('main.category_specific', category='asccessory') }}" class="{% if request.path.startswith('/category/accessory') %}active{% endif %}">ACCESSORIES</a></li>
                 <li><a href="{{ url_for('main.category_specific', category='shoes') }}" class="{% if request.path.startswith('/category/shoes') %}active{% endif %}">SHOES</a></li>
+                <li><a href="{{ url_for('main.category_specific', category='asccessory') }}" class="{% if request.path.startswith('/category/accessory') %}active{% endif %}">ACCESSORIES</a></li>
             </ul>
         
         </nav> 
@@ -273,12 +41,17 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Cart</span>
                 </a>
+
                 <a href="{{ url_for('main.wishlist') }}" class="wishlist-btn">
                     <i class="fa fa-heart"></i>
                     <span>Wishlist</span>
+                </a>
+
                 <div class="dropdown navbar-right">
+                    <button class="dropbtn">
                     <i class="fa fa-user"></i>
-                    <button class="dropbtn">Account </button>
+                    <span> Account </span>
+                    </button>
                     <div class="dropdown-content">
                         {% if current_user.is_authenticated %}
                             <a href="{{ url_for('auth.profile', id=current_user.id) }}">Profile</a>
